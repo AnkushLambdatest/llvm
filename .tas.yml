@@ -1,0 +1,9 @@
+framework: golang
+version: 1.0.0
+preRun:
+  command:
+    - "go get -d ./..."
+    - "go mod vendor"
+postMerge:
+  pattern:
+    - "./**/*_test.go"
